@@ -54,13 +54,11 @@ body{
 }
 
 @media(max-width:500px){
-    .navbar{
+    .navbar ul li{
         flex-direction: column;
         height: 100px;
     }
-}
-
-@media(mas-width:500px){
+    
     #screenshots{
         display: none;
     }
