@@ -53,6 +53,13 @@ body{
     color: skyblue;
 }
 
+@media(max-width:500px){
+    .navbar{
+        flex-direction: column;
+        height: 100px;
+    }
+}
+
 section{
     display: flex;
     flex-direction: column;
