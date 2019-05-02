@@ -60,6 +60,12 @@ body{
     }
 }
 
+@media(mas-width:500px){
+    #screenshots{
+        display: none;
+    }
+}
+
 section{
     display: flex;
     flex-direction: column;
