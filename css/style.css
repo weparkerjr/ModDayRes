@@ -59,11 +59,16 @@ body{
         height: 100px;
     }
 
-    .screenshots{
-        display: none;
-    }
+
 
     #screenshots{
+        display: none;
+    }
+}
+
+@media(max-width:500px){
+    .navbar ul li .screenshots{
+        border: 1px solid red;
         display: none;
     }
 }
