@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333333;
+    color: #ffffff;
+    line-height: 1.6;
+    height:100vh;
+    /* overflow: hidden; */
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    /* CSS Smooth Scroll */
+    overflow-y: scroll;
+    /* scroll-behavior: smooth; */
+    scroll-snap-type: y mandatory;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.7);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar ul li{
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+}
+
+.navbar ul li a:hover{
+    color: skyblue;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+
+}
+
+section h1{
+    font-size: 4rem;
+}
+
+section p{
+    font-size: 1.5rem;
+}
+
+/* #login{
+    display: flex;
+}
+
+#login p{
+    color: red;
+}
+
+#login h1{
+    text-align: right;
+    color: red;
+} */
+
+section#home{
+    background: url('https://source.unsplash.com/YpVOQir8dIY/1600x900') no-repeat center center/cover;
+}
+
+section#screenshots{
+    background: url('https://source.unsplash.com/4zbEzE87zz4/1600x900') no-repeat center center/cover;
+}
+
+/* section#home{
+    background: url('http://source.unsplash.com/bZZp1PmHI0E/1600x900') no-repeat center center/cover;
+} */
+
+section#about{
+    background: url('https://source.unsplash.com/1_CMoFsPfso/1900x1500') no-repeat center center/cover;
+}
+
+/* section#about{
+    background: url('http://source.unsplash.com/VRxo0yY-gyM/1600x900') no-repeat center center/cover;
+} */
+
+/* section#service{
+    background: url('http://source.unsplash.com/K2tdx2mFDHc/1600x900') no-repeat center center/cover;
+} */
+
+section#login{
+    background: url('https://source.unsplash.com/mslrSX69KvQ/1600x900') no-repeat center center/cover;
+}
+
+/* section#login{
+    background: url('http://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;
+} */
+
+
+
+#login button {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+#login button:active {
+	transform: scale(0.95);
+}
+
+#login button:focus {
+	outline: none;
+}
+
+#login button.ghost {
+	background-color: transparent;
+    border-color: #fff
+    ;
+}
+
+
+/* CAROUSEL */
+
+.carousel{
+    position: relative;
+    height: 600px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.carousel_image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel_track-container{
+    background: lightgreen;
+    /* padding: 10px; */
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel_track{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+.carousel_slide{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel_button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.carousel_button button:focus{
+	outline: none;
+}
+
+.carousel_button--left{
+    left: -40px;
+}
+
+.carousel_button--right{
+    right: -40px;
+}
+
+.carousel_button img{
+    width: 12px;
+}
+
+.carousel_nav{
+    /* background: pink; */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.carousel_indicator{
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba(255,255,255,0.75);
+    
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.carousel_indicator.current-slide{
+    background: rgba(123, 235, 108, 0.9);
+}
+
+.is-hidden {
+    display: none;
+}
