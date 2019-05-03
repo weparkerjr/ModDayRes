@@ -54,10 +54,12 @@ body{
 }
 
 @media(max-width:500px){
-    .navbar ul li {
-        flex-wrap: wrap;
-        height: 100px;
-        border: 1px solid red;
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        height: auto;
+        border: 1px solid blue;
     }
 
     p{
