@@ -55,15 +55,16 @@ body{
 
 @media(max-width:500px){
     .navbar ul {
+        position: relative;
         display: flex;
         flex-direction: column;
         /* flex-wrap: wrap; */
         height: 100px;
-        border: 1px solid green;
+        border: 1px solid red;
     }
 
     p{
-        padding: 0.2rem;
+        padding: 0.4rem;
     }
 
     #screenshots{
