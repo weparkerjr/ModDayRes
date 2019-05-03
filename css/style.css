@@ -54,7 +54,7 @@ body{
 }
 
 @media(max-width:500px){
-    .navbar ul li a{
+    .navbar ul li {
         flex-wrap: wrap;
         height: 100px;
         border: 1px solid red;
@@ -71,7 +71,6 @@ body{
 
 @media(max-width:500px){
     .navbar ul li .screenshots{
-        
         display: none;
     }
 }
