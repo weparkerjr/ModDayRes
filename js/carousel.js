@@ -1,16 +1,25 @@
+// Grabbing the carousel_track element from DOM
 const track = document.querySelector('.carousel_track');
+// Creating an array from the children of the track NodeList
 const slides = Array.from(track.children);
+// Grabbing elements for the next button
 const nextButton = document.querySelector('.carousel_button--right');
+// Grabbing elements for the previous button
 const prevButton = document.querySelector('.carousel_button--left');
+// Grabbing buttons for the first dot 
 const dotsNav = document.querySelector('.carousel_nav');
+// Creating an array from the NodeList
 const dots = Array.from(dotsNav.children);
 
+// Setting up the width of the pics
 const slideWidth = slides[0].getBoundingClientRect().width;
 
 const setSlidePosition = (slide, index) => {slide.style.left = slideWidth * index + 'px';};
 
+// Looping through each of the slides using the setSlidePosition arrow function
 slides.forEach(setSlidePosition);
 
+// 
 const moveToSlide = (track, currentSlide, targetSlide) => {
     track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
     currentSlide.classList.remove('current-slide');
@@ -35,6 +44,7 @@ const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
     }
 }
 
+// Starting points - Event Listeners and setting up constants to use in the later functions:
 prevButton.addEventListener('click', e => {
     const currentSlide = track.querySelector('.current-slide');
     const prevSlide = currentSlide.previousElementSibling;
@@ -73,7 +83,4 @@ dotsNav.addEventListener('click', e => {
     updateDots(currentDot, targetDot);
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
 
-
-
- 
 })

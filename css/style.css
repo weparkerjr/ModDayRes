@@ -54,19 +54,21 @@ body{
 }
 
 @media(max-width:500px){
+
+
     .navbar ul {
-        position: relative;
+        /* position: relative; */
         display: flex;
         flex-direction: column;
         /* flex-wrap: wrap; */
         height: 100px;
-        border: 1px solid red;
+        border: 1px solid green;
     }
 
     p{
         padding: 0.4rem;
     }
-
+/* stop showing the slideshow */
     #screenshots{
         display: none;
     }
